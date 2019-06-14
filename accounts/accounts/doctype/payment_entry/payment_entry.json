@@ -1,0 +1,128 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2019-06-11 00:08:11.354857",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "posting_date",
+  "payment_type",
+  "payment_fromto_section",
+  "party_type",
+  "party",
+  "accounts_section",
+  "account_paid_from",
+  "column_break_8",
+  "account_paid_to",
+  "section_break_10",
+  "amount_paid",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "ACC-PAY-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_type",
+   "fieldtype": "Select",
+   "label": "Payment Type",
+   "options": "Receive\nPay"
+  },
+  {
+   "fieldname": "payment_fromto_section",
+   "fieldtype": "Section Break",
+   "label": "Payment From/To"
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Link",
+   "label": "Party",
+   "options": "Party"
+  },
+  {
+   "fieldname": "accounts_section",
+   "fieldtype": "Section Break",
+   "label": "Accounts"
+  },
+  {
+   "fieldname": "account_paid_from",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Account Paid From",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_paid_to",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Account Paid To",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amount_paid",
+   "fieldtype": "Currency",
+   "label": "Amount Paid"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Payment Entry",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Select",
+   "label": "Party Type",
+   "options": "Customer\nSupplier"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2019-06-12 15:19:27.583615",
+ "modified_by": "Administrator",
+ "module": "Accounts",
+ "name": "Payment Entry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

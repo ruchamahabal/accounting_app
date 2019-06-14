@@ -1,0 +1,108 @@
+{
+ "autoname": "field:account_name",
+ "creation": "2019-05-29 12:12:19.558562",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "account_number",
+  "account_name",
+  "root_type",
+  "party_name",
+  "is_group",
+  "parent_account",
+  "lft",
+  "rgt",
+  "old_parent",
+  "balance"
+ ],
+ "fields": [
+  {
+   "fieldname": "account_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Account Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Account Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "root_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Root Type",
+   "options": "Asset\nLiability\nIncome\nExpense"
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Link",
+   "label": "Party Name",
+   "options": "Party",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "parent_account",
+   "fieldtype": "Link",
+   "label": "Parent Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left"
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Old Parent"
+  },
+  {
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "label": "Balance"
+  }
+ ],
+ "modified": "2019-06-06 12:31:08.822204",
+ "modified_by": "Administrator",
+ "module": "Accounts",
+ "name": "Account",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

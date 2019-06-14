@@ -1,0 +1,134 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2019-05-29 12:31:01.443891",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "supplier",
+  "posting_date",
+  "due_date_for_payment",
+  "is_paid",
+  "items_section_break",
+  "items",
+  "section_break_8",
+  "total_quantity",
+  "total_amount",
+  "column_break_11",
+  "credit_to",
+  "expense_account",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Party"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "due_date_for_payment",
+   "fieldtype": "Date",
+   "label": "Due Date for Payment"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_paid",
+   "fieldtype": "Check",
+   "label": "Is Paid"
+  },
+  {
+   "fieldname": "items_section_break",
+   "fieldtype": "Section Break",
+   "label": "Items"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Sales Invoice Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "ACC-PINV-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_quantity",
+   "fieldtype": "Float",
+   "label": "Total Quantity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "credit_to",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Credit To",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expense_account",
+   "fieldtype": "Link",
+   "label": "Expense Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Purchase Invoice",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2019-06-12 08:44:35.001778",
+ "modified_by": "Administrator",
+ "module": "Accounts",
+ "name": "Purchase Invoice",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

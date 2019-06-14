@@ -1,0 +1,67 @@
+{
+ "autoname": "TRANS.#####",
+ "creation": "2019-05-29 12:17:24.696123",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "account",
+  "party",
+  "debit",
+  "credit",
+  "des_for_trans",
+  "against_account"
+ ],
+ "fields": [
+  {
+   "fieldname": "debit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Debit"
+  },
+  {
+   "fieldname": "credit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Credit"
+  },
+  {
+   "fieldname": "des_for_trans",
+   "fieldtype": "Text",
+   "label": "Description for Transaction"
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Party",
+   "options": "Party"
+  },
+  {
+   "fieldname": "against_account",
+   "fieldtype": "Text",
+   "hidden": 1,
+   "label": "Against Account",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-06-10 16:20:42.910699",
+ "modified_by": "Administrator",
+ "module": "Accounts",
+ "name": "Journal Entry Account",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "track_changes": 1
+}
