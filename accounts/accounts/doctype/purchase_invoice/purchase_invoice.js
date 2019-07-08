@@ -27,10 +27,21 @@ frappe.ui.form.on('Purchase Invoice', {
         }
       }
     });
-    frm.add_custom_button(__('Make Payment Entry'), function(){
-			frappe.route_options = {"payment_type": "Pay", "party_type":"Supplier", "party": frm.doc.supplier, "account_paid_to": frm.doc.credit_to, "amount_paid": frm.doc.total_amount};
-			frappe.set_route("Form", "Payment Entry","New Payment Entry");
-	 });
+		if(frm.doc.docstatus == 1){
+	    frm.add_custom_button(__('Make Payment Entry'), function(){
+				frappe.route_options = {"payment_type": "Pay", "party_type":"Supplier", "party": frm.doc.supplier, "account_paid_to": frm.doc.credit_to, "amount_paid": frm.doc.total_amount};
+				frappe.set_route("Form", "Payment Entry","New Payment Entry");
+		 });
+	 }
+	 if(frm.doc.docstatus == 1){
+		 frm.add_custom_button(__('View General Ledger'), function(){
+			 frappe.route_options = {
+				 "from_date": frm.doc.posting_date,
+				 "to_date": frm.doc.posting_date
+			 };
+		  frappe.set_route("query-report", "General Ledger Report")
+		 });
+	 }
 	},
 
   total_amount: function(frm) {

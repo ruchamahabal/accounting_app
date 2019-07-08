@@ -1,0 +1,54 @@
+{
+ "creation": "2019-06-17 11:14:18.591928",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "quantity",
+  "rate",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1,
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-06-17 11:14:18.591928",
+ "modified_by": "Administrator",
+ "module": "Accounts",
+ "name": "Purchase Invoice Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

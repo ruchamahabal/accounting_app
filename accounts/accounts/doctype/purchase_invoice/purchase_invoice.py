@@ -3,7 +3,8 @@
 # For license information, please see license.txt
 
 from __future__ import unicode_literals
-# import frappe
+import frappe
+from frappe import _
 from frappe.model.document import Document
 
 class PurchaseInvoice(Document):
@@ -17,7 +18,7 @@ class PurchaseInvoice(Document):
 				frappe.throw(_("Item quantity cannot be 0"))
 
 	def validate_due_date(self):
-		if self.get("payment_due_date") < self.get("posting_date"):
+		if self.get("due_date_for_payment") < self.get("posting_date"):
 			frappe.throw(_("Payment Due Date cannot be before Purchase Invoice Posting Date"))
 
 	def on_submit(self):

@@ -4,6 +4,20 @@
 
 frappe.query_reports["Profit and Loss Statement"] = {
 	"filters": [
+		{
+			"fieldname":"from_fiscal_year",
+			"label": __("Start date"),
+			"fieldtype": "Link",
+			"options": "Fiscal Year",
+			"reqd": 1
+		},
+		{
+			"fieldname": "to_fiscal_year",
+			"label": __("End date"),
+			"fieldtype": "Link",
+			"options": "Fiscal Year",
+			"reqd": 1
+		}
 
 	]
 };

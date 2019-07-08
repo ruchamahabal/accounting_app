@@ -10,6 +10,15 @@ frappe.ui.form.on('Journal Entry', {
         }
       };
     });
+		if(frm.doc.docstatus == 1){
+			frm.add_custom_button(__('View General Ledger'), function(){
+				frappe.route_options = {
+					"from_date": frm.doc.posting_date,
+					"to_date": frm.doc.posting_date
+				};
+				frappe.set_route("query-report", "General Ledger Report");
+			});
+		}
 	},
 });
 
